@@ -1,4 +1,4 @@
-# Project Experiment 1a
+# Project Experiment 1c
 from agent import Agent
 from PDWorld import World
 from PDWorld import Node
@@ -10,7 +10,7 @@ import pygame
 from Visualize import Visual
 
 
-class E1:
+class E2:
     agent = Agent(0, 4, False)
     havePackageWorld = World()
     noPackageWorld = World()
@@ -22,6 +22,8 @@ class E1:
 
     show = Visual()
 
+    fiveBlock = True
+
     for i in range(500):
         oldAgent = copy.deepcopy(agent)
         if not agent.havePackage:
@@ -31,10 +33,19 @@ class E1:
             world = havePackageWorld
             world.worldUpdate(noPackageWorld, havePackageWorld)
 
+        if(fiveBlock):
+            for x in range (0,5):
+                for y in range(0,5):
+                    if(world.map[x][y].blockCount == 5 and world.map[x][y].isDropOff):
+                        show.run_visual(noPackageWorld, havePackageWorld, agent, resetNumber, terminationList)
+                        fiveBlock = False
+
         SelectMove.PRANDOM(agent, world, False)
+
         newAgent = copy.deepcopy(agent)
         updateMatrix.QUpdate(oldAgent, newAgent, world, 0.3, 0.5)
         if world.isCompleteDelevery():
+            show.run_visual(noPackageWorld, havePackageWorld, agent, resetNumber, terminationList)
             noPackageWorld.mapReset()
             havePackageWorld.mapReset()
             resetNumber += 1
@@ -56,13 +67,23 @@ class E1:
             world = havePackageWorld
             world.worldUpdate(noPackageWorld, havePackageWorld)
 
+        if(fiveBlock):
+            for x in range (0,5):
+                for y in range(0,5):
+                    if(world.map[x][y].blockCount == 5 and world.map[x][y].isDropOff):
+                        show.run_visual(noPackageWorld, havePackageWorld, agent, resetNumber, terminationList)
+                        fiveBlock = False
+
         SelectMove.PEPLOIT(agent, world, False)
+
         newAgent = copy.deepcopy(agent)
         updateMatrix.QUpdate(oldAgent, newAgent, world, 0.3, 0.5)
-        if (i == 1799 or i == 3799 or i == 5799 or i == 7799):
+        if (i == 1499 or i == 3499 or i == 5499):
             show.run_visual(noPackageWorld, havePackageWorld, agent, resetNumber, terminationList)
 
         if world.isCompleteDelevery():
+            world.worldUpdate(world, noPackageWorld)
+            show.run_visual(noPackageWorld, havePackageWorld, agent, resetNumber, terminationList)
             noPackageWorld.mapReset()
             havePackageWorld.mapReset()
             resetNumber += 1
