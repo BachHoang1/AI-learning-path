@@ -10,7 +10,7 @@ import pygame
 from Visualize import Visual
 
 
-class E2:
+class E1c:
     agent = Agent(0, 4, False)
     havePackageWorld = World()
     noPackageWorld = World()

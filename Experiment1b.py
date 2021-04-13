@@ -1,4 +1,4 @@
-# Project Experiment 1a
+# Project Experiment 1b
 from agent import Agent
 from PDWorld import World
 from PDWorld import Node

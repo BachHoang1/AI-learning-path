@@ -73,8 +73,6 @@ class World:
             for y in range(0, 5):
                 if(self.map[x][y].isPickUp and self.map[x][y].blockCount > 0):
                     return False
-                elif(self.map[x][y].isDropOff and self.map[x][y].blockCount < 5):
-                    return False
 
         #if all pickup have 0 block or all dropoff have 5, return True
         return True
@@ -101,6 +99,10 @@ class World:
                     self.map[x][y].blockCount = 5
                 elif (self.map[x][y].isDropOff):
                     self.map[x][y].blockCount = 0
+
+    def mapChange(self):
+        self.setPickUp(3, 1)
+        self.map[1][3].isPickUp = False
 
     #update world2's blockcount on all nodes to world1
     def worldUpdate(self, world1, world2):

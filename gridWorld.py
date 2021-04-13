@@ -24,14 +24,14 @@ for row in range(5):
         grid[row].append(0)  # Append a cell
 
 #set pickup
-grid[0][0] = 1
-grid[2][2] = 1
-grid[4][4] = 1
+grid[1][3] = 1
+grid[4][2] = 1
 
 #set drop off
-grid[1][4] = 2
+grid[0][0] = 2
 grid[4][0] = 2
-grid[4][2] = 2
+grid[2][2] = 2
+grid[4][4] = 2
 
 # Initialize pygame
 pygame.init()

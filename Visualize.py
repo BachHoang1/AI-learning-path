@@ -94,7 +94,7 @@ class Visual:
         self.screen.blit(text, (800, 550))
 
         if len(terminationSteps) >= 10:
-            font = pygame.font.SysFont('Arial', 27)
+            font = pygame.font.SysFont('Arial', 18)
         info3 = "Steps taken to reach terminal state: " + ', '.join(map(str, terminationSteps))
         text = font.render(info3, False, WHITE)
         self.screen.blit(text, (0, 600))
