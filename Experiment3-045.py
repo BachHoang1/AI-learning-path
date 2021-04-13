@@ -8,7 +8,7 @@ from Visualize import Visual
 
 
 # Using the SARSA algorithm
-class E1c:
+class E32:
     agent = Agent(0, 4, False)
     havePackageWorld = World()
     noPackageWorld = World()

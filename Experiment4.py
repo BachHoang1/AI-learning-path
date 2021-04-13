@@ -9,7 +9,7 @@ import pygame
 import copy
 import random
 
-class E5:
+class E4:
 # Create agent in starting location with no package
     agent = Agent(0, 4, False)
 
