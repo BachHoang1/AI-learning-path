@@ -21,7 +21,7 @@ class Visual:
     def __init__(self):
         pygame.init()
         self.screen = pygame.display.set_mode((1100, 650))
-        pygame.display.set_caption("Running of Group 7 Computer")
+        pygame.display.set_caption("Running of Group 10(Saiph) Computer")
 
 #world 1 is world with no packagr, world 2 is with package
     def draw(self, world1, world2, agent, resetNumber, terminationSteps):
