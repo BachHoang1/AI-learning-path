@@ -56,7 +56,7 @@ class E1a:
             world = havePackageWorld
             world.worldUpdate(noPackageWorld, havePackageWorld)
 
-        SelectMove.PEPLOIT(agent, world, False)
+        SelectMove.PRANDOM(agent, world, False)
         newAgent = copy.deepcopy(agent)
         updateMatrix.QUpdate(oldAgent, newAgent, world, 0.3, 0.5)
         if (i == 1499 or i == 3499 or i == 5499):

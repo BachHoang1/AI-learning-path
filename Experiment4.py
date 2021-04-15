@@ -1,4 +1,4 @@
-#Project Experiment 5
+#Project Experiment 4
 from agent import Agent
 from PDWorld import World
 from PDWorld import Node
@@ -51,7 +51,6 @@ class E4:
 # Show grids for PRANDOM
     show.run_visual(noPackageWorld, havePackageWorld, agent, resetNumber, terminationList)
 
-# Run 7800 operations of PEXPLOIT
 # When the agent reaches a terminal state the 2nd time, swap pickup/drop off locations
     terminalCounter = 0
     for i in range(5500):

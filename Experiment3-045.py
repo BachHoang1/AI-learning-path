@@ -1,4 +1,4 @@
-#Project Experiment 2
+#Project Experiment 3
 from agent import Agent
 from PDWorld import World
 from SelectMove import SelectMove
@@ -7,7 +7,7 @@ import copy
 from Visualize import Visual
 
 
-# Using the SARSA algorithm
+
 class E32:
     agent = Agent(0, 4, False)
     havePackageWorld = World()

@@ -1,4 +1,3 @@
-#QMatrix/SARSA updates and storing written by Logan F.
 from agent import Agent
 from PDWorld import World
 from PDWorld import Node

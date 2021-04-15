@@ -1,5 +1,5 @@
 #this file contains storage to a .txt, where is not used anywhere in the project
-#Kept fow showing teammate contributeion, created by Joe
+
 class qConnect:
 
     def __init__(self):
